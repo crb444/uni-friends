@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatRoomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id = "@+id/appbarlayout_tool_bar"
+            android:background = "@color/colorPrimary"
+            android:layout_width = "match_parent"
+            android:layout_height = "?attr/actionBarSize"
+            app:layout_scrollFlags = "scroll|snap|enterAlways"
+            app:theme = "@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme = "@style/ThemeOverlay.AppCompat.Dark"
+            app:titleTextColor="@android:color/holo_green_dark"
+            app:title="CHAT ROOMS"
+            app:subtitle="List of available rooms for you"
+            app:subtitleTextColor="@android:color/holo_green_light"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey" />
+
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="CHAT ROOMS"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rooms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!-- <TextView
+             android:id="@+id/item_chat_room_name"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+             android:padding="8dp"/>-->
+
+    </LinearLayout>
+
+</RelativeLayout>
